@@ -1,0 +1,168 @@
+{% load static %}
+{% static "images" as baseUrl %}    <!-- for images -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+	  <link rel="stylesheet" href="{%static 'styles/app.css' %}">
+</head>
+<body>
+<div class="img"></div>
+<form class="form" action="register" method="post">
+	<h2>Area (Square Feet)</h2>
+	{% csrf_token %}
+    <input class="area"  type="number" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+
+
+
+  <h2>Bedrooms</h2>
+
+	<div class="switch-field">
+		{% csrf_token %}
+		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+		<label for="radio-bhk-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+		<label for="radio-bhk-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+		<label for="radio-bhk-3">3</label>
+		<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+		<label for="radio-bhk-4">4</label>
+		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+		<label for="radio-bhk-5">5</label>
+    <input type="radio" id="radio-bhk-6" name="uiBHK" value="6"/>
+		<label for="radio-bhk-6">6</label>
+	</div>
+
+	<h2>Bathrooms</h2>
+	<div class="switch-field">
+		{% csrf_token %}
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+    <input type="radio" id="radio-bath-6" name="uiBathrooms" value="6"/>
+		<label for="radio-bath-6">6</label>
+	</div>
+
+  <h2>Car Parking</h2>
+	<div class="switch-field">
+		{% csrf_token %}
+    <input type="radio" id="radio-car-0" name="carparking" value="0"/>
+		<label for="radio-car-0">0</label>
+		<input type="radio" id="radio-car-1" name="carparking" value="1" checked/>
+		<label for="radio-car-1">1</label>
+		<input type="radio" id="radio-car-2" name="carparking" value="2"/>
+		<label for="radio-car-2">2</label>
+		<input type="radio" id="radio-car-3" name="carparking" value="3"/>
+		<label for="radio-car-3">3</label>
+		<input type="radio" id="radio-car-4" name="carparking" value="4"/>
+		<label for="radio-car-4">4</label>
+		<input type="radio" id="radio-car-5" name="carparking" value="5"/>
+		<label for="radio-car-5">5</label>
+	</div>
+
+
+  <h2>Property Type</h2>
+<div>
+  {% csrf_token %}
+<select class="location" name="type" id="uiLocations" required>
+  <option value="" disabled="disabled" selected="selected">Choose a Type</option>
+      <option>Condominium</option>
+      <option>Residence</option>
+      <option>Terrace</option>
+      <option>Semi-detached</option>
+      <option>Bungalow</option>
+      <option>Apartment</option>
+</select>
+</div>
+
+
+
+<h2>Furnishing</h2>
+<div>
+{% csrf_token %}
+<select class="location" name="furnishing" id="uiLocations" required>
+<option value="" disabled="disabled" selected="selected">Choose a Type</option>
+    <option>Fully Furnished</option>
+    <option>Partly Furnished</option>
+    <option>Unfurnished</option>
+</select>
+</div>
+
+
+
+
+		<h2>Location</h2>
+	<div>
+		{% csrf_token %}
+  <select class="location" name="location" id="uiLocations" required>
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+
+        <option>Ampang, Kuala Lumpur</option>
+        <option>Ampang Hilir, Kuala Lumpur</option>
+        <option>Bandar Menjalara, Kuala Lumpur</option>
+        <option>Bangsar, Kuala Lumpur</option>
+        <option>Bangsar South, Kuala Lumpur</option>
+        <option>Batu Caves, Kuala Lumpur</option>
+        <option>Brickfields, Kuala Lumpur</option>
+        <option>Bukit Bintang, Kuala Lumpur</option>
+        <option>Bukit Jalil, Kuala Lumpur</option>
+        <option>Bukit Tunku (Kenny Hills), Kuala Lumpur</option>
+        <option>Cheras, Kuala Lumpur</option>
+        <option>City Centre, Kuala Lumpur</option>
+        <option>Damansara Heights, Kuala Lumpur</option>
+        <option>Desa ParkCity, Kuala Lumpur</option>
+        <option>Desa Pandan, Kuala Lumpur</option>
+        <option>Desa Petaling, Kuala Lumpur</option>
+        <option>Dutamas, Kuala Lumpur</option>
+        <option>Jalan Ipoh, Kuala Lumpur</option>
+        <option>Jalan Klang Lama (Old Klang Road), Kuala Lumpur</option>
+        <option>Jalan Kuching, Kuala Lumpur</option>
+        <option>Jalan Sultan Ismail, Kuala Lumpur</option>
+        <option>Kepong, Kuala Lumpur</option>
+        <option>Keramat, Kuala Lumpur</option>
+        <option>KLCC, Kuala Lumpur</option>
+        <option>KL City, Kuala Lumpur</option>
+        <option>KL Eco City, Kuala Lumpur</option>
+        <option>KL Sentral, Kuala Lumpur</option>
+        <option>Kuchai Lama, Kuala Lumpur</option>
+        <option>Mont Kiara, Kuala Lumpur</option>
+        <option>OUG, Kuala Lumpur</option>
+				<option>Pantai, Kuala Lumpur</option>
+        <option>Pandan Perdana, Kuala Lumpur</option>
+        <option>Salak Selatan, Kuala Lumpur</option>
+        <option>Segambut, Kuala Lumpur</option>
+        <option>Sentul, Kuala Lumpur</option>
+        <option>Seputeh, Kuala Lumpur</option>
+        <option>Setiawangsa, Kuala Lumpur</option>
+        <option>Setapak, Kuala Lumpur</option>
+        <option>Sri Hartamas, Kuala Lumpur</option>
+        <option>Sri Petaling, Kuala Lumpur</option>
+				<option>Sungai Besi, Kuala Lumpur</option>
+        <option>Taman Desa, Kuala Lumpur</option>
+        <option>Taman Tun Dr Ismail, Kuala Lumpur</option>
+        <option>Taman Melawati, Kuala Lumpur</option>
+        <option>Titiwangsa, Kuala Lumpur</option>
+        <option>Wangsa Maju, Kuala Lumpur</option>
+
+  </select>
+</div>
+
+<button type="submit" class="submit" type="button">Estimate Price</button>
+
+
+<div id="uiEstimatedPrice" class="result">	<h2>{{number1}}</h2> </div>
+
+</form>
+
+</body>
+</html>
