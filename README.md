@@ -1,6 +1,5 @@
 # KL Property Price Prediction
 
-# Motivation Group
 ### Here I have uploaded machine learning KL property price prediction project. If you want to practice it just download or clone it. Thank you :)
 <br/>
 
