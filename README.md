@@ -3,6 +3,11 @@
 ### Here I have uploaded machine learning KL property price prediction project. If you want to practice it just download or clone it. Thank you :)
 <br/>
 
+# This Project Video Link:
+
+https://www.linkedin.com/posts/tuhin95_machinelearning-linearregression-django-activity-6720278960418254849-khMu
+<br/>
+
 # Some User Interfaces of this Website:
 
 ## Example 1 : Filling up the Information
