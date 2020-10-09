@@ -7,7 +7,7 @@
 
 https://www.linkedin.com/posts/tuhin95_machinelearning-linearregression-django-activity-6720278960418254849-khMu
 <br/>
-<br/>
+#
 
 # Some User Interfaces of this Website:
 
